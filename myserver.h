@@ -1,9 +1,9 @@
 #ifndef MYSERVER_H
 #define MYSERVER_H
 
-
-
 #include <QTcpServer>
+
+
 
 class MyServer : public QTcpServer
 {
@@ -12,15 +12,19 @@ public:
     explicit MyServer(QObject *parent = nullptr);
     void startServer();
 
+
 signals:
 
 
-public slots:
+private slots:
+    void myNewConnection();
+//    void logError(QAbstractSocket::SocketError socketError);
 
 protected:
     void incomingConnection(qintptr socketDescriptor);
 
 private:
+    QTcpServer *tcpserver;
 
 
 };

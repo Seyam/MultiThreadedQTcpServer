@@ -1,5 +1,7 @@
 #include "mythread.h"
 
+
+
 MyThread::MyThread(qintptr ID,   QObject *parent) : QThread(parent)
 {
     this->socketDescriptor = ID;
@@ -10,17 +12,24 @@ void MyThread::run()
     // thread starts here
     qDebug() << " Thread started";
 
+
     socket = new QTcpSocket();
-    if(!socket->setSocketDescriptor(this->socketDescriptor)){
-        emit error(socket->error());
-        return;
-    }
 
     //connect signal and slot
     // note - Qt::DirectConnection is used because it's multithreaded
 
     connect(socket, SIGNAL(readyRead()),    this,   SLOT( readyRead()), Qt::DirectConnection);
     connect(socket, SIGNAL(disconnected()),    this,   SLOT( disconnected()));
+//    connect(socket, SIGNAL(error(QTcpSocket::SocketError socketerror)),    this,   SLOT( errorThrown()));
+    connect(socket, QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::errorOccurred),  this, &MyThread::errorThrown);
+
+    if(!socket->setSocketDescriptor(this->socketDescriptor)){
+        emit error(socket->error());
+        return;
+    }
+
+
+
 
     // We'll have multiple clients, we want to know which is which
     qDebug() << "Client "<< socketDescriptor << "  connected";
@@ -79,8 +88,19 @@ void MyThread::readyRead()
 
 void MyThread::disconnected()
 {
-    qDebug() << socketDescriptor << " Disconnected";
+    qWarning() << socketDescriptor << " Disconnected";
 
     socket->deleteLater();//safe here, no crash
     exit(0);
 }
+
+
+
+void MyThread::errorThrown(QAbstractSocket::SocketError socketerror)
+{
+    qDebug() << "error: " << socketerror;
+}
+
+
+
+
