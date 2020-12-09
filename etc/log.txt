@@ -1,58 +1,8 @@
-2020-11-19 16:35:33   Debug: Listening at port:  1234  at ip:  QHostAddress(QHostAddress::Any)
-2020-11-19 16:35:51   Debug: 904  Connecting...
-2020-11-19 16:35:51   Debug: Yaay one new client!
-2020-11-19 16:35:51   Debug:  Thread started
-2020-11-19 16:35:51   Debug: Client  904   connected
-2020-11-19 16:35:56   Debug: 904  Data in:  "x"
-2020-11-19 16:35:56   Debug: Client Not Authorized
-2020-11-19 16:35:56   Debug: 904  Disconnected
-2020-11-19 16:36:17   Debug: 912  Connecting...
-2020-11-19 16:36:17   Debug: Yaay one new client!
-2020-11-19 16:36:17   Debug:  Thread started
-2020-11-19 16:36:17   Debug: Client  912   connected
-2020-11-19 16:36:26   Debug: 912  Data in:  "h"
-2020-11-19 16:36:26   Debug: Client Not Authorized
-2020-11-19 16:36:26   Debug: 912  Disconnected
-2020-11-19 16:37:58   Debug: 904  Connecting...
-2020-11-19 16:37:58   Debug: Yaay one new client!
-2020-11-19 16:37:58   Debug:  Thread started
-2020-11-19 16:37:58   Debug: Client  904   connected
-2020-11-19 16:38:06   Debug: 904  Data in:  "FF0186000000000079"
-2020-11-19 16:38:06   Debug: Client Authorized
-2020-11-19 16:38:13   Debug: 904  Data in:  "FF0186000000000080"
-2020-11-19 16:38:13   Debug: Token Authorized For Sending Data 
-2020-11-19 16:38:13   Debug: Sending data:  "FF86006500360096019A0002FD002800280005002000500000EA"
-2020-11-19 16:38:23   Debug: 904  Data in:  "FF0186000000000sds080"
-2020-11-19 16:38:23   Debug: Client Not Authorized
-2020-11-19 16:38:23   Debug: 904  Disconnected
-
-
-
-2020-11-19 16:43:16   Debug: 656  Connecting...
-2020-11-19 16:43:16   Debug: Yaay one new client!
-2020-11-19 16:43:16   Debug:  Thread started
-2020-11-19 16:43:16   Debug: Client  656   connected
-2020-11-19 16:43:18   Debug: 656  Data in:  "r"
-2020-11-19 16:43:18   Debug: Client Not Authorized
-2020-11-19 16:43:18   Debug: 656  Disconnected
-2020-11-19 16:45:32   Debug: Listening at port:  1234  at ip:  QHostAddress(QHostAddress::Any)
-2020-11-19 16:45:42   
-2020-11-19 16:45:42   Debug: Yaay one new client!
-2020-11-19 16:45:42   Debug:  Thread started
-2020-11-19 16:45:42   Debug: Client  904   connected
-2020-11-19 16:45:45   Debug: 904  Data in:  "\x03"
-2020-11-19 16:45:45   Debug: Client Not Authorized
-2020-11-19 16:45:45   Warning: 904  Disconnected
-2020-11-19 16:50:03   
-2020-11-19 16:50:03   Debug: Yaay one new client!
-2020-11-19 16:50:03   Debug:  Thread started
-2020-11-19 16:50:03   Debug: Client  904   connected
-2020-11-19 16:50:43   Debug: error:  QAbstractSocket::RemoteHostClosedError
-2020-11-19 16:50:43   Warning: 904  Disconnected
-2020-11-19 16:50:45   
-2020-11-19 16:50:45   Debug: Yaay one new client!
-2020-11-19 16:50:45   Debug:  Thread started
-2020-11-19 16:50:45   Debug: Client  940   connected
-2020-11-19 16:51:08   Debug: Listening at port:  1234  at ip:  QHostAddress(QHostAddress::Any)
-2020-11-19 16:52:20   Debug: Listening at port:  1234  at ip:  QHostAddress(QHostAddress::Any)
-2020-11-19 17:03:34   Debug: Could not start the server
+2020-12-09 11:10:45   Debug: Listening at port:  1234  at ip:  QHostAddress(QHostAddress::Any)
+2020-12-09 11:11:03   Info: 904  Connecting...
+2020-12-09 11:11:03   Debug: Yaay one new client!
+2020-12-09 11:11:03   Debug:  Thread started
+2020-12-09 11:11:03   Debug: Client  904   connected
+2020-12-09 11:11:11   Debug: 904  Data in:  "5"
+2020-12-09 11:11:11   Debug: Client Not Authorized
+2020-12-09 11:11:11   Warning: 904  Disconnected

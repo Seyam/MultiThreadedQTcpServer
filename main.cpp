@@ -38,9 +38,9 @@ QString searchConfigFile() {
         }
     }
     if (file.exists()) {
-        QString configFileName=QDir(file.fileName()).canonicalPath();
-        qDebug("using log file %s", qPrintable(configFileName));
-        return configFileName;
+        QString logFileName=QDir(file.fileName()).canonicalPath();
+        qDebug("using log file %s", qPrintable(logFileName));
+        return logFileName;
     }
     else {
         qFatal("log file not found");
@@ -76,7 +76,8 @@ void myMessageHandler(QtMsgType type, const QMessageLogContext &, const QString 
     QDateTime dateTime = dateTime.currentDateTime();
 
     //choose and open file
-    QFile outFile("seyamLog");//logFileName
+//    QFile outFile("seyamLog");//creates new file in the mingw debug folder and writes data
+    QFile outFile(logFileName);//predefined directory path
 
     outFile.open(QIODevice::WriteOnly | QIODevice::Append);
     QTextStream ts(&outFile);
